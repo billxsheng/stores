@@ -16,4 +16,4 @@ Use stores when
 2. Store is read-only
 3. Stores are mutated with pure functions
 
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![alt text](https://cdn-images-1.medium.com/max/2560/1*M9d5RTuCdIQUhJuuJY10sw.png)
