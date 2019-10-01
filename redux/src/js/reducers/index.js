@@ -8,7 +8,8 @@ import { ADD_ARTICLE } from "../constants/action-types";
 //reducer returning the initial state
 
 const initialState = {
-    articles: []
+    articles: [],
+    remoteArticles: []
 };
 
 //this function does not work because the state is immutable and array.push() alters the original array
@@ -28,6 +29,13 @@ function rootReducer(state = initialState, action) {
             articles: state.articles.concat(action.payload)
         });
     }
+
+    if (action.type === "DATA_LOADED") {
+        return Object.assign({}, state, {
+          remoteArticles: state.remoteArticles.concat(action.payload)
+        });
+    }
+    
     return state
 }
 

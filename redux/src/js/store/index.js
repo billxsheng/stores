@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware, compose } from "redux";
 import rootReducer from "../reducers/index.js";
 import { forbiddenWordsMiddleware } from "../middleware/index.js";
+import thunk from "redux-thunk";
 
 const storeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -9,7 +10,7 @@ const storeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 //the state in redux comes from reducers; reducers produce the state of your application
 const store = createStore(
     rootReducer,
-    storeEnhancers(applyMiddleware(forbiddenWordsMiddleware))
+    storeEnhancers(applyMiddleware(forbiddenWordsMiddleware, thunk))
 );
   
 //state of app lives as single immutable object witin store
