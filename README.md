@@ -1,5 +1,5 @@
 # Stores 
-A repo to explore the concept of stores, specifically Redux
+A repo to explore the concept of stores, specifically Redux.
 
 ## Basics
 
